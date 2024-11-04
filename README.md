@@ -26,4 +26,11 @@ docker tag webapp gcr.io/lab-gke-438519/webapp = deixando a tag na imagem, um pa
 Parte 2 do curso
 
 
- 
+gcloud container clusters create-auto guestbook --region us-east1  = Esse comando cria um cluster com o nome guestbook na regiao us-east1
+
+
+
+kubectl get svc -n kube-system = lista todos os serviços do namespace kube-system 
+
+kubectl apply -f https://k8s.io/examples/admin/dns/dnsutils.yaml = URL do DNS sutil
+
