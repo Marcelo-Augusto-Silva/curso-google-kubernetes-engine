@@ -18,4 +18,12 @@ docker tag webapp gcr.io/lab-gke-438519/webapp = deixando a tag na imagem, um pa
 
  kubectl get pods -o wide = mostra todos os pods e os nós em que eles estão 
 
+
+
+
+
+
+Parte 2 do curso
+
+
  
