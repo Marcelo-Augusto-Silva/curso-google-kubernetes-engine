@@ -34,3 +34,13 @@ kubectl get svc -n kube-system = lista todos os serviços do namespace kube-syst
 
 kubectl apply -f https://k8s.io/examples/admin/dns/dnsutils.yaml = URL do DNS sutil
 
+
+kubectl exec -it [nome do container] -- /bin/bash = comando para rodar o bash dentro de um container
+
+
+
+dig redis-leader.default.svc.cluster.local = esse comando serve para fazer uma consulta no DNS local do cluster esse comando rodei dentro do container que eu subi na linha 35
+
+dig [nome do servico].[namespace].[svc ou pod].[cluster].[local]
+
+    
