@@ -34,4 +34,21 @@ Blue / Green = Mantem duas infraestrutura, uma azul e uma verde, voce muda da az
 CANARY = Voce faz deploy em alguns pods e depois vai validando, se estiver validado, voce aplica para outros pods
 
 
- 
+gcloud container clusters create-auto guestbook --region us-east1  = Esse comando cria um cluster com o nome guestbook na regiao us-east1
+
+
+
+kubectl get svc -n kube-system = lista todos os serviços do namespace kube-system 
+
+kubectl apply -f https://k8s.io/examples/admin/dns/dnsutils.yaml = URL do DNS sutil
+
+
+kubectl exec -it [nome do container] -- /bin/bash = comando para rodar o bash dentro de um container
+
+
+
+dig redis-leader.default.svc.cluster.local = esse comando serve para fazer uma consulta no DNS local do cluster esse comando rodei dentro do container que eu subi na linha 35
+
+dig [nome do servico].[namespace].[svc ou pod].[cluster].[local]
+
+    
