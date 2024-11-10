@@ -25,5 +25,13 @@ docker tag webapp gcr.io/lab-gke-438519/webapp = deixando a tag na imagem, um pa
 
 Parte 2 do curso
 
+Tipos de estrategias de deploy 
+
+Rolling update = Vai atualizando um container por vez 
+
+Blue / Green = Mantem duas infraestrutura, uma azul e uma verde, voce muda da azul para verde, voce mantem as duas infraestruturas porque assim você pode reverter
+
+CANARY = Voce faz deploy em alguns pods e depois vai validando, se estiver validado, voce aplica para outros pods
+
 
  
