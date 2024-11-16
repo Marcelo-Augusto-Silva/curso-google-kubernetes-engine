@@ -4,6 +4,8 @@ Google Container Registry API = É igual o DockerHub, onde você armazena as img
 
 docker tag webapp gcr.io/lab-gke-438519/webapp = deixando a tag na imagem, um padrao é deixar o nome da image com o nome do laboratorio do projeto 
 
+docker build -t webapp:v1 . = cria uma img 
+
  gcloud projects list = lista todos os projetos na nuvem 
 
 
@@ -27,7 +29,7 @@ Parte 2 do curso
 
 Tipos de estrategias de deploy 
 
-Rolling update = Vai atualizando um container por vez 
+Rolling update = Vai atualizando um container por vez, quando nós rodamos o comando para atualizar um deploy ou svc, e rodamos o "kubectl apply -f deploy.yaml" estamos fazendo um rolling update
 
 Blue / Green = Mantem duas infraestrutura, uma azul e uma verde, voce muda da azul para verde, voce mantem as duas infraestruturas porque assim você pode reverter
 
@@ -52,3 +54,6 @@ dig redis-leader.default.svc.cluster.local = esse comando serve para fazer uma c
 dig [nome do servico].[namespace].[svc ou pod].[cluster].[local]
 
     
+
+
+
