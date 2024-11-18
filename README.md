@@ -63,3 +63,8 @@ dig [nome do servico].[namespace].[svc ou pod].[cluster].[local]
 
 
 >>>>>>> 84f5a711b7bf31121291e298d09385e51a04ed7e
+
+
+
+HPA = Horizontal Pod Autoscaler 
+
