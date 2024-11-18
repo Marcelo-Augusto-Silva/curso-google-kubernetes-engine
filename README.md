@@ -44,3 +44,5 @@ dig redis-leader.default.svc.cluster.local = esse comando serve para fazer uma c
 dig [nome do servico].[namespace].[svc ou pod].[cluster].[local]
 
     
+
+ kubectl create secret generic mysql --from-literal=password=senhadomysql = esse comando cria um secret com o valor password igual senhadomysql
