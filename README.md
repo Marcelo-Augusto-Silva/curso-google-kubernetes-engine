@@ -4,6 +4,8 @@ Google Container Registry API = É igual o DockerHub, onde você armazena as img
 
 docker tag webapp gcr.io/lab-gke-438519/webapp = deixando a tag na imagem, um padrao é deixar o nome da image com o nome do laboratorio do projeto 
 
+docker build -t webapp:v1 . = cria uma img 
+
  gcloud projects list = lista todos os projetos na nuvem 
 
 
@@ -25,6 +27,16 @@ docker tag webapp gcr.io/lab-gke-438519/webapp = deixando a tag na imagem, um pa
 
 Parte 2 do curso
 
+Tipos de estrategias de deploy 
+
+Rolling update = Vai atualizando um container por vez, quando nós rodamos o comando para atualizar um deploy ou svc, e rodamos o "kubectl apply -f deploy.yaml" estamos fazendo um rolling update
+
+Blue / Green = Mantem duas infraestrutura, uma azul e uma verde, voce muda da azul para verde, voce mantem as duas infraestruturas porque assim você pode reverter, 
+
+Blue / Green = Voce cria dois deploy e coloca um label, por exemplo [versio: blue], depois coloca no serviço para ele escolher o deploy, por meio desse label, nesse modo quem escolhe qual versão vai ficar é o service 
+
+CANARY = Voce faz deploy em alguns pods e depois vai validando, se estiver validado, voce aplica para outros pods,  nessa estretégia nós subimos dois deploy com o mesmo label, o svc vai redirecionar o usuario para as duas versoes, assim vai ficar dois ambiemte em produçao e assim voce vai testando 
+
 
 gcloud container clusters create-auto guestbook --region us-east1  = Esse comando cria um cluster com o nome guestbook na regiao us-east1
 
@@ -45,4 +57,9 @@ dig [nome do servico].[namespace].[svc ou pod].[cluster].[local]
 
     
 
+<<<<<<< HEAD
  kubectl create secret generic mysql --from-literal=password=senhadomysql = esse comando cria um secret com o valor password igual senhadomysql
+=======
+
+
+>>>>>>> 84f5a711b7bf31121291e298d09385e51a04ed7e
