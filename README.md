@@ -68,3 +68,12 @@ dig [nome do servico].[namespace].[svc ou pod].[cluster].[local]
 
 HPA = Horizontal Pod Autoscaler 
 
+
+kubectl get hpa = lista todos os hpa 
+
+https://github.com/rakyll/hey = script para fazer requisiçoes e testar HPA, um script de dos
+
+
+kubectl get hpa --watch === fica monitorando toda hora o hpa, o parametro --watch serve para todos os comandos ou quase todos
+
+HELM k8s 
